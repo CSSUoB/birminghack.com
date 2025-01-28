@@ -1,0 +1,104 @@
+---
+layout: page
+event:
+  date: "22nd - 23rd March 2025"
+  location: "School of Computer Science, University of Birmingham"
+schedule:
+  - day: Saturday
+    events:
+    - time: "09:00"
+      title: Registration
+    - time: "11:00"
+      title: Opening ceremony
+    - time: "12:00"
+      title: Hacking begins
+    - time: "13:00"
+      title: Lunch
+  - day: Sunday
+    events:
+    - time: "17:00"
+      title: Doors close
+faqs:
+  - question: What's a hackathon?
+    answer: Your mum
+---
+
+<div class="navbar">
+  <nav>
+    <a href="#schedule">Schedule</a>
+    <a href="#faqs">FAQs</a>
+  </nav>
+</div>
+<div class="hero-container">
+  <div class="hero">
+    <img class="logo" src="/assets/birminghack-pathed.svg" />
+    <div class="date">
+      {{ page.event.date }}
+    </div>
+    <div class="location">
+      {{ page.event.location }}
+    </div>
+  </div>
+</div>
+<div class="welcome section">
+  <h2>Welcome to birmingHack!</h2>
+  <p><b>birmingHack</b> is a 24-hour hackathon hosted by the Computer Science Society at the University of Birmingham. Whether you're 
+  a seasoned hacker, or have never participated in a hackathon before, hackathons are a great place to learn some new skills and
+  have fun!</p> 
+</div>
+<div id="schedule" class="schedule section">
+  <h2>Schedule</h2>
+  <div class="days">
+    {% for day in page.schedule %}
+    <div class="day">
+      <h3 class="header">{{ day.day }}</h3>
+      {% for item in day.events %}
+      <div class="item">
+        <div class="time">
+          {{ item.time }}         
+        </div>
+        <div class="description">
+          {{ item.title }} 
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    {% endfor %}
+  </div>
+</div>
+<div id="faqs" class="faqs section">
+  <h2>FAQs</h2>
+  <p>
+    {% for faq in page.faqs %}
+    <details>
+      <summary>{{ faq.question }}</summary>
+      <p>{{ faq.answer }}</p>
+    </details>
+    <div class="item">
+      <div class="time">
+        {{ item.time }}         
+      </div>
+      <div class="description">
+        {{ item.title }} 
+      </div>
+    </div>
+    {% endfor %}
+  </p>
+</div>
+<div class="footer section">
+  <hr /> 
+  <div class="footer-content">
+    <div class="left">
+      <span class="copyright">&#169; 2025 Computer Science Society</span>
+      <span class="organised-by">birmingHack is organised by the <a href="https://cssbham.com">University of Birmingham Computer Science Society</a>, 
+        which is part of the <a href="https://www.guildofstudents.com/">Guild of Students</a>.</span>
+      <img src="assets/css-logo.png" width="100"/>
+      <span class="organised-by">This site's source code.</span>
+    </div>
+    <div class="links">
+      <span>Useful links</span>
+      <a href="/code-of-conduct">Code of Conduct</a>
+      <a href="https://cssbham.com">Computer Science Society</a>
+    </div>
+  </div>
+</div>
