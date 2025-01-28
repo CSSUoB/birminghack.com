@@ -4,31 +4,92 @@ event:
   date: "22nd - 23rd March 2025"
   location: "School of Computer Science, University of Birmingham"
 schedule:
-  - day: Saturday
-    events:
-    - time: "09:00"
-      title: Registration
-    - time: "11:00"
-      title: Opening ceremony
-    - time: "12:00"
-      title: Hacking begins
-    - time: "13:00"
-      title: Lunch
-  - day: Sunday
-    events:
-    - time: "17:00"
-      title: Doors close
+  events:
+    - day: Saturday
+      events:
+      - time: "09:00"
+        title: Registration
+      - time: "11:00"
+        title: Opening ceremony
+      - time: "12:00"
+        title: Hacking begins
+      - time: "13:00"
+        title: Lunch
+      - time: "14:00"
+        title: Event no. 1
+      - time: "14:30"
+        title: Workshop no. 1
+      - time: "16:00"
+        title: Event no. 2
+      - time: "17:30"
+        title: Workshop no. 2
+      - time: "18:30"
+        title: Dinner
+      - time: "20:00"
+        title: Event no. 3
+      - time: "22:00"
+        title: Event no. 4
+    - day: Sunday
+      events:
+      - time: "00:00"
+        title: Midnight snacks / event no. 5
+      - time: "08:00"
+        title: Breakfast
+      - time: "11:00"
+        title: Devpost registration deadline
+      - time: "12:00"
+        title: Hacking ends
+      - time: "12:15"
+        title: Lunch
+      - time: "13:00"
+        title: Judging begins
+      - time: "15:00"
+        title: Closing ceremony
+      - time: "17:00"
+        title: Doors close
+  final: false
+  notes: "birmingHack takes place over both days of the weekend. The event will end no later than 5pm on Sunday."
+sponsors:
+  - name: Me
+    logo: asdf
+partners:
+  - name: HackathonsUK
+    logo: /assets/huk-logo-colour.png
+    colour: "eee"
+    url: https://www.hackathons.org.uk
+  - name: CSS
+    logo: /assets/css-logo-colour-crop.png
+    colour: "2f3c63"
+    url: https://cssbham.com
+  - name: AFNOM
+    logo: /assets/afnom-logo.png
+    colour: "000000"
+    url: https://afnom.net
+  - name: AlgoSoc
+    logo: /assets/algosoc-logo-colour.png
+    colour: "0B0000"
+    url: ""
+  - name: Guild of Students
+    logo: /assets/gos-logo-colour.png
+    colour: "eee"
+    url: https://guildofstudents.com
+#  - name: The Univeristy of Birmingham School of Computer Science
+#    logo: /assets/uob-logo-colour.png
+#    colour: "eee"
 faqs:
   - question: What's a hackathon?
-    answer: Your mum
+    answer: a really coole vent
+
+  - question: Who can attend?
+    answer: me
+
+  - question: When will tickets be available?
+    answer: answer
+
+#  - question: ...
+#    answer: 
 ---
 
-<div class="navbar">
-  <nav>
-    <a href="#schedule">Schedule</a>
-    <a href="#faqs">FAQs</a>
-  </nav>
-</div>
 <div class="hero-container">
   <div class="hero">
     <img class="logo" src="/assets/birminghack-pathed.svg" />
@@ -40,65 +101,68 @@ faqs:
     </div>
   </div>
 </div>
+
 <div class="welcome section">
-  <h2>Welcome to birmingHack!</h2>
+  <h3>Welcome to birmingHack!</h3>
   <p><b>birmingHack</b> is a 24-hour hackathon hosted by the Computer Science Society at the University of Birmingham. Whether you're 
   a seasoned hacker, or have never participated in a hackathon before, hackathons are a great place to learn some new skills and
   have fun!</p> 
 </div>
-<div id="schedule" class="schedule section">
-  <h2>Schedule</h2>
-  <div class="days">
-    {% for day in page.schedule %}
-    <div class="day">
-      <h3 class="header">{{ day.day }}</h3>
-      {% for item in day.events %}
-      <div class="item">
-        <div class="time">
-          {{ item.time }}         
+
+<div id="schedule" class="schedule">
+  <div class="section">
+    <h2 class="section-title">Schedule</h2>
+    <p>
+      {{ page.schedule.notes }} 
+    </p>
+    <div class="days">
+      {% for day in page.schedule.events %}
+      <div class="day">
+        <h3 class="header">{{ day.day }}</h3>
+        {% for item in day.events %}
+        <div class="item">
+          <div class="time">
+            {{ item.time }}         
+          </div>
+          <div class="description">
+            {{ item.title }} 
+          </div>
         </div>
-        <div class="description">
-          {{ item.title }} 
-        </div>
+        {% endfor %}
       </div>
       {% endfor %}
     </div>
+    {% unless page.schedule-final %}
+    <p class="disclaimer">* This schedule is not final; it is subject to change.</p>
+    {% endunless %}
+  </div>
+</div>
+
+<div id="sponsors" class="sponsors section">
+  <h2 class="section-title">Sponsors</h2>
+</div>
+
+<div id="partners" class="partners section">
+  <h2 class="section-title">Partners</h2>
+  <div class="partners-container">
+    {% for partner in page.partners %}
+      <div class="partner" style="{{ 'background-color: #' | append: partner.colour }}">
+        <a href="{{ partner.url }}" target="_blank">
+          <img src="{{ partner.logo }}" alt="{{ partner.name }}" height="75" />        
+        </a>
+      </div>
     {% endfor %}
   </div>
 </div>
+
 <div id="faqs" class="faqs section">
-  <h2>FAQs</h2>
-  <p>
-    {% for faq in page.faqs %}
-    <details>
-      <summary>{{ faq.question }}</summary>
-      <p>{{ faq.answer }}</p>
-    </details>
-    <div class="item">
-      <div class="time">
-        {{ item.time }}         
-      </div>
-      <div class="description">
-        {{ item.title }} 
-      </div>
-    </div>
-    {% endfor %}
-  </p>
+  <h2 class="section-title">FAQs</h2>
+  <p>See the answers to some frequently asked questions below</p>
+  {% for faq in page.faqs %}
+  <details>
+    <summary>{{ faq.question }}</summary>
+    <p>{{ faq.answer }}</p>
+  </details>
+  {% endfor %}
 </div>
-<div class="footer section">
-  <hr /> 
-  <div class="footer-content">
-    <div class="left">
-      <span class="copyright">&#169; 2025 Computer Science Society</span>
-      <span class="organised-by">birmingHack is organised by the <a href="https://cssbham.com">University of Birmingham Computer Science Society</a>, 
-        which is part of the <a href="https://www.guildofstudents.com/">Guild of Students</a>.</span>
-      <img src="assets/css-logo.png" width="100"/>
-      <span class="organised-by">This site's source code.</span>
-    </div>
-    <div class="links">
-      <span>Useful links</span>
-      <a href="/code-of-conduct">Code of Conduct</a>
-      <a href="https://cssbham.com">Computer Science Society</a>
-    </div>
-  </div>
-</div>
+
