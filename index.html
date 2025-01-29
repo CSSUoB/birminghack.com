@@ -83,13 +83,63 @@ partners:
     url: https://cs.bham.ac.uk
 faqs:
   - question: What's a hackathon?
-    answer: a really coole vent
+    answer: |
+      A hackathon is a programming competition where you work in a team to create a project in a short amount of time. 
+      It's a great way to learn new skills, meet new people, and have fun!
+
+  - question: How much does it cost?
+    answer: 
+      Absolutely nothing! birmingHack is free to attend, you just need to register a ticket when they become available.
+      Food will also be provided for all attendees.
 
   - question: Who can attend?
-    answer: me
-
+    answer: |
+      birmingHack is open to all students aged 18+ at the University of Birmingham, regardless of your course or experience level. 
+      Please note that for this inaugural event, we are only able to accept students from the University of Birmingham; for future 
+      events, we hope to open up to students from other UK universities.
+      
   - question: When will tickets be available?
-    answer: answer
+    answer: |
+      Tickets will be available soon! When they do so, we will post an update on Discord and Instagram.
+
+  - question: Why should I attend?
+    answer: |
+      Because it's fun! If you've ever thought about attending a hackathon before, then birmingHack is a great entry point.
+      Plus, it's free ;)
+  
+  - question: Do I need loads of experience to participate?
+    answer: |
+      Not at all! birmingHack is a great place to learn, and we will have workshops and people available to help you out.
+  
+  - question: What should I bring?
+    answer: |
+      You should bring your laptop, a charger, any other hardware you need, and your student ID. 
+      Please note there will not be any hardware available to borrow at the event, nor can we permit soldering equipment inside the building.
+      
+  - question: How do I get there?
+    answer: |
+      birmingHack is held at the School of Computer Science at the University of Birmingham. 
+      This is located next to University station, and is referred to as Y9 on university maps.
+  
+  - question: How large can my team be?
+    answer: |
+      Teams can be up to 4 people to be eligible for prizes. 
+
+  - question: What if I don't have a team?
+    answer: |
+      No problem! We will have a team building session at the start of the event to help you find one.
+  
+  - question: When can I start working on my project?
+    answer: |
+      You can start working on your project as soon as hacking begins at 12:00 on Saturday.
+      You're welcome to come up with ideas before then, but we ask you do not start working on your project before this time.
+
+  - question: How does judging work?
+    answer: |
+      You may submit your project to as many categories as you want on Devpost. 
+      After hacking ends, you will demo your project to specific judges from the categories you entered, and a winner
+      for each category will be selected.
+  
 
 #  - question: ...
 #    answer: 
@@ -145,24 +195,27 @@ faqs:
 
 <div id="sponsors" class="sponsors section">
   <h2 class="section-title">Sponsors</h2>
+  <div class="partners-container">
+    TBA
+  </div>
 </div>
 
 <div id="partners" class="partners section">
   <h2 class="section-title">Partners</h2>
   <div class="partners-container">
-    {% for partner in page.partners %}
+    TBA
+    <!-- {% for partner in page.partners %}
       <div class="partner" style="{{ 'background-color: #' | append: partner.colour }}">
         <a href="{{ partner.url }}" target="_blank">
           <img src="{{ partner.logo }}" alt="{{ partner.name }}" height="75" />        
         </a>
       </div>
-    {% endfor %}
+    {% endfor %} -->
   </div>
 </div>
 
 <div id="faqs" class="faqs section">
   <h2 class="section-title">FAQs</h2>
-  <p>See the answers to some frequently asked questions below</p>
   {% for faq in page.faqs %}
   <details>
     <summary>{{ faq.question }}</summary>
