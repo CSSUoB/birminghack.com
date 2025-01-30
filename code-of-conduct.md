@@ -21,7 +21,7 @@ All attendees, whether hacker or organiser, should aspire to do the following.
 
 **Look out for each other.** Hackathons can be overwhelming. Check in with and support one another.
 
-This isn’t an exhaustive list. Rather, take it in the spirit in which it’s intended: building a hackathon where attendees can learn and grow.
+This isn’t an exhaustive list. Rather, take it in the spirit in which it’s intended: fostering a hackathon environment where attendees can learn and grow.
 
 ## Unacceptable behaviour
 
