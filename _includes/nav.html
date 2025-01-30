@@ -1,8 +1,13 @@
 <div class="navbar">
   <nav>
-    <a href="#schedule">Schedule</a>
-    <a href="#sponsors">Sponsors</a>
-    <a href="#partners">Partners</a>
-    <a href="#faqs">FAQs</a>
+    <a href="/#schedule">Schedule</a>
+    <a href="/#sponsors">Sponsors</a>
+    <a href="/#partners">Partners</a>
+    <a href="/#faqs">FAQs</a>
   </nav>
+  {% if include.logo %}
+  <a href="/">
+    <img src="/assets/birminghack-pathed.svg" height="65" />
+  </a>
+  {% endif %}
 </div>
