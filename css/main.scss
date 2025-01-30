@@ -334,6 +334,11 @@ div.footer-content {
 }
 
 @media (max-width: 1000px) {
+    :root {
+        --text-small: 0.8rem;
+        --text-normal: 1rem;
+    }
+
     div.hero-container {
         width: 100%;
     }
