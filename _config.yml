@@ -1,3 +1,6 @@
 title: birmingHack 
 description: The University of Birmingham's premier hackathon
 url: birminghack.com
+
+include: ["_redirects"]
+keep_files: ["_redirects"]
