@@ -53,7 +53,7 @@ You directly provide most of the data we collect, specifically when you:
 
 ## How we store your data
 
-We stores your data on [Tito](https://ti.to/), where the tickets for birmingHack are registered.
+We store your data on [Tito](https://ti.to/), where the tickets for birmingHack are registered.
 We will keep your data for a year, or until the next birmingHack, whichever is sooner.
 Once this time has passed, we will delete your data by anonymising the event from within our Tito account.
 
