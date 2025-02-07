@@ -1,7 +1,8 @@
 ---
-layout: text
+layout: document
+title: Code of Conduct
+last-updated: 30th January 2025
 ---
-# Code of Conduct
 
 Welcome to birmingHack! Our goal is to create a hackathon environment where attendees can grow, learn from each other, and have fun; one which is also inclusive, accessible and friendly for everyone, regardless of their gender (identity and expression), age, sexual orientation, (dis)ability, physical appearance, size, race, ethnicity, religion (or lack thereof), or technology choices.
 
@@ -49,5 +50,3 @@ If you experience or witness any violations of this Code of Conduct, or wish to 
 ## Acknowledgments
 
 This Code of Conduct draws from [Go Community Code of Conduct](https://go.dev/conduct), which itself is adapted from the [Contributor Covenant](https://www.contributor-covenant.org/version/1/4/code-of-conduct/).
-
-Last updated: 30th January 2025
