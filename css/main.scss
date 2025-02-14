@@ -156,10 +156,10 @@ div.section {
     }
 }
 
-div.welcome {
+// div.welcome {
     // background-color: var(--color-background-alt);
-    margin-bottom: 2rem;
-}
+    // margin-bottom: 2rem;
+// }
 
 div.navbar {
     display: flex;
@@ -201,6 +201,7 @@ nav a:hover {
 div.schedule {
     // background-color: var(--color-background-light);
     background-color: var(--color-background-alt);
+    margin-top: 1rem;
     
     div.days {
         display: flex;
