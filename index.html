@@ -206,7 +206,7 @@ faqs:
     <!-- TBA -->
     {% for partner in page.partners %}
       <div class="partner" style="{{ 'background-color: #' | append: partner.colour }}">
-        <a href="{{ partner.url }}" target="_blank">
+        <a href="{{ partner.url }}" target="_blank" title="{{ partner.name }}">
           <img src="{{ partner.logo }}" alt="{{ partner.name }}" height="75" />        
         </a>
       </div>
