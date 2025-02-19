@@ -70,11 +70,11 @@ partners:
   - name: AlgoSoc
     logo: /assets/algosoc-logo-colour.png
     colour: "0B0000"
-    url: ""
+    url: "https://www.guildofstudents.com/organisation/algosoc/"
   - name: Games Development Society
     logo: /assets/gds-logo-colour.png
     colour: "fff"
-    url: ""
+    url: "https://www.guildofstudents.com/organisation/gamesdevelopment/"
   - name: Guild of Students
     logo: /assets/gos-logo-colour.png
     colour: "eee"
@@ -82,7 +82,7 @@ partners:
   - name: The Univeristy of Birmingham School of Computer Science
     logo: /assets/uob-logo-colour.png
     colour: "eee"
-    url: https://cs.bham.ac.uk
+    url: https://www.cs.bham.ac.uk
 faqs:
   - question: What's a hackathon?
     answer: |
@@ -200,6 +200,44 @@ faqs:
     <p class="disclaimer">* This schedule is not final; it is subject to change.</p>
     {% endunless %}
   </div>
+
+  <div id="timer">
+    <div id="timer-time">
+      <div id="days">
+        <span class="count">
+          --
+        </span>
+        <span class="label">
+          days
+        </span>
+      </div>
+      <div id="hours">
+        <span class="count">
+          --
+        </span>
+        <span class="label">
+          hours
+        </span>
+      </div>
+      <div id="minutes">
+        <span class="count">
+          --
+        </span>
+        <span class="label">
+          minutes
+        </span>
+      </div>
+      <div id="seconds">
+        <span class="count">
+          --
+        </span>
+        <span class="label">
+          seconds
+        </span>
+      </div>
+    </div>
+    <span class="timer-label">until birmingHack starts!</span>
+  </div>
 </div>
 
 <div id="partners" class="partners section">
@@ -226,3 +264,6 @@ faqs:
   {% endfor %}
 </div>
 
+<script>
+{% include countdown.js date="Mar 22, 2025 09:00:00" %}
+</script>

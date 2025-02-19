@@ -25,6 +25,7 @@
     --color-heading-inv: #111;
     --color-text-inv: #000;
     
+    --text-smaller: 0.8rem;
     --text-small: 0.9rem;
     --text-normal: 1.05rem;
     --text-large: 1.5rem;
@@ -202,6 +203,7 @@ div.schedule {
     // background-color: var(--color-background-light);
     background-color: var(--color-background-alt);
     margin-top: 1rem;
+    padding-bottom: 2rem;
     
     div.days {
         display: flex;
@@ -270,6 +272,43 @@ div.partners-container {
         border: 1px solid var(--color-line);
         border-radius: 0.2rem;
         padding: 0.5rem;
+    }
+}
+
+div#timer {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-monospace);
+
+    div#timer-time {
+        display: flex;
+        flex-direction: row;
+        gap: 1.5rem;
+        align-items: center;
+
+        div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        div:not(:last-child) {
+            border-right: 1px solid var(--color-text);
+            padding-right: 1.5rem;
+        }
+
+        div span.count {
+            color: var(--color-primary);
+            font-weight: 700;
+            font-size: 3rem;
+        }
+
+        div span.label {
+            font-size: var(--text-smaller);
+        }
     }
 }
 
@@ -395,5 +434,9 @@ div.footer-content {
         .links {
             align-items: flex-start;
         }
+    }
+
+    div#timer {
+        flex-direction: column;
     }
 }
