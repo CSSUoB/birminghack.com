@@ -43,9 +43,9 @@ If you experience or witness any violations of this Code of Conduct, or wish to 
 
 **Directly to an organiser.** If you are comfortable reaching out directly to an organiser during the event, then please speak to them in-person and they will advise you on next steps.
 
-**Online via email.** If this behaviour happens online, or you are unable to reach out in-person, then you can email the Computer Science Society directly at `css@guild.bham.ac.uk`.
+**Online via email.** If this behaviour happens online, or you are unable to reach out in-person, then you can email the Computer Science Society directly at <mailto:css@guild.bham.ac.uk>.
 
-**To the Guild of Students.** If you feel that the organisers have not adequately handled your complaint, your complaint is about the actions of a particular organiser, or if you do not feel comfortable reaching out to the organisers, then you can contact the Guild of Students, of which the Computer Science Society is a member of. (todo: how)
+**To the Guild of Students.** If you feel that the organisers have not adequately handled your complaint, your complaint is about the actions of a particular organiser, or if you do not feel comfortable reaching out to the organisers, then you can contact the Guild of Students, of which the Computer Science Society is a member of.
 
 ## Acknowledgments
 
