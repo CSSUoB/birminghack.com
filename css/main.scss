@@ -4,6 +4,7 @@
 @import url("/css/reset.css");
 @import url("/assets/fonts/iosevka/IosevkaSs08Web.css");
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css');
 
 :root {
     // --font-sans-serif: 'Hind', 'Noto Sans', 'Segoe UI', 'Chivo', sans-serif;
@@ -18,6 +19,7 @@
     --color-line: #3a3533;
 
     --color-primary: #50c878;
+    --color-primary-alt: #359f58;
     --color-heading: #eee;
     --color-text: #fff;
     --color-text-muted: #666;
@@ -183,19 +185,25 @@ nav {
     gap: 1rem;
     flex-wrap: wrap;
     justify-content: flex-end;
+
 }
 
 a:link, a:visited {
-    color: var(--color-primary)
+    color: var(--color-primary);
+    text-decoration: none;
 }
 
 nav a:link, nav a:visited  {
     color: var(--color-text);
-    font-weight: 700;
     text-decoration: none;
+
+    &.tickets {
+        font-weight: 700;
+        color: var(--color-primary);
+    }
 }
 
-nav a:hover {
+nav a:hover, a:hover {
     text-decoration: underline;
 }
 
@@ -253,6 +261,35 @@ div.schedule {
         width: 100%;
         font-size: var(--text-small);
         text-align: right;
+    }
+}
+
+div.tickets {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 2px solid var(--color-line);
+    border-bottom: 2px solid var(--color-line);
+    
+    div.tickets-description {
+        display: flex;
+        flex-direction: column;
+
+        p.tickets-title {
+            font-size: var(--text-large);
+            font-family: var(--font-monospace);
+            font-weight: 500;
+        }
+    }
+    a {
+        font-family: var(--font-monospace);
+        font-weight: 700;
+        font-size: var(--text-larger);
+        flex-shrink: 0;
+        background-color: var(--color-primary-alt);
+        color: var(--color-text);
+        padding: 0.5rem;
     }
 }
 
@@ -345,6 +382,7 @@ div.footer-content {
         
         a {
             color: var(--color-text-muted);
+            text-decoration: underline;
         }
         
         .organised-by {
@@ -367,7 +405,6 @@ div.footer-content {
         
         a {
             color: var(--color-text);
-            text-decoration: none;
         }
         
         span {
@@ -408,6 +445,10 @@ div.footer-content {
     
     div.navbar {
         padding: 1rem 1rem 0 1rem;
+    }
+
+    div.tickets {
+        flex-direction: column;
     }
     
     div.schedule {
