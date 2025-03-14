@@ -293,7 +293,7 @@ div.tickets {
     }
 }
 
-div.partners-container {
+div.partners-container, div.sponsors-container {
     width: 100%;
     padding: 1rem 0 0 0;
     gap: 2rem;
@@ -303,12 +303,16 @@ div.partners-container {
     max-width: 1000px;
     flex-wrap: wrap;
     
-    div.partner {
+    div.partner, div.sponsor {
         display: flex;
         background-color: var(--color-background-light);
         border: 1px solid var(--color-line);
         border-radius: 0.2rem;
         padding: 0.5rem;
+
+        img {
+            max-width: 400px;
+        }
     }
 }
 

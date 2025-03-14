@@ -3,6 +3,7 @@ layout: page
 event:
   date: "22nd - 23rd March 2025"
   location: "School of Computer Science, University of Birmingham"
+  edition: 1.0
 schedule:
   events:
     - day: Saturday
@@ -55,8 +56,36 @@ tickets:
   released: true
   link: https://ti.to/birminghack/1
 sponsors:
-  - name: Me
-    logo: asdf
+  - tier: gold
+    size: 140
+    sponsors:
+      - name: Neuphonic
+        logo: /assets/neuphonic-logo.png
+        colour: "ffffff"
+        url: https://neuphonic.com/
+  - tier: silver
+    size: 70
+    sponsors:
+      - name: Valyfy
+        logo: /assets/valyfy-logo.jpg
+        colour: "ffffff"
+        url: https://valyfy.com
+  - tier: bronze
+    size: 30
+    sponsors:
+      - name: The Trade Desk
+        logo: /assets/the-trade-desk-logo.jpg
+        colour: "ffffff"
+        url: https://www.thetradedesk.com/uk
+      - name: Kainos
+        logo: /assets/kainos-logo.png
+        colour: "ffffff"
+        url: https://kainos.com
+      - name: Majestic
+        logo: /assets/majestic-logo.png
+        colour: "2A556D"
+        height: 50
+        url: https://majestic.com
 partners:
 #  - name: HackathonsUK
 #    logo: /assets/huk-logo-colour.png
@@ -183,9 +212,20 @@ faqs:
 
 <div id="sponsors" class="sponsors section">
   <h2 class="section-title">Sponsors</h2>
-  <div class="partners-container">
-    TBA
-  </div>
+  <!-- <p>
+    birmingHack {{ page.event.edition }} is proudly sponsored by the following
+  </p> -->
+  {% for sponsor-tier in page.sponsors %}
+    <div class="sponsors-container">
+      {% for sponsor in sponsor-tier.sponsors %}
+      <div class="sponsor" style="{{ 'background-color: #' | append: sponsor.colour }}">
+        <a href="{{ sponsor.url }}" target="_blank" title="{{ sponsor.name }}">
+          <img src="{{ sponsor.logo }}" alt="{{ sponsor.name }}" style="{{ 'height: ' | append: sponsor-tier.size | append: "px" }}; {% if sponsor.height %}{{ 'height: ' | append: sponsor.height | append: "px !important;"}}{% endif %}" />        
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+  {% endfor %}
 </div>
 
 <div id="schedule" class="schedule">
