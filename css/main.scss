@@ -40,10 +40,35 @@ html, body {
     font-family: var(--font-sans-serif);
     color: var(--color-text);
     font-size: var(--text-normal);
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: -100px;
+    width: 80vw;
+    height: 100vh;
+    background-image: url('/assets/Birminghack_logo.png');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: contain;
+    opacity: 0.6;
+    z-index: 0;
+    pointer-events: none;
+}
+
+main {
+    position: relative;
+    z-index: 1;
 }
 
 div.hero-container {
     width: 100%;
+    position: relative;
+    z-index: 1;
 }
 
 div.hero {
@@ -145,6 +170,8 @@ div.section {
     max-width: 1000px;
     padding: 1.5rem 1rem;
     gap: 1rem;
+    position: relative;
+    z-index: 1;
     // border-bottom: 1px solid var(--color-line);
     
     &:last-of-type {
@@ -178,6 +205,8 @@ div.navbar {
     margin: 0 auto;
     font-family: var(--font-monospace);
     color: var(--color-text);
+    position: relative;
+    z-index: 2;
 }
 
 nav {
@@ -483,5 +512,9 @@ div.footer-content {
 
     div#timer {
         flex-direction: column;
+    }
+
+    body::before {
+        display: none;
     }
 }
