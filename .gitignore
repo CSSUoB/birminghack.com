@@ -14,3 +14,6 @@ _site/
 
 #node
 node_modules/
+# .gitattributes
+# Force all files to use LF line endings
+* text eol=lf
