@@ -39,6 +39,7 @@ schedule:
 tickets:
   released: false
   link: https://ti.to/birminghack/2
+show_sponsors: false
 sponsors:
   - tier: gold
     size: 140
@@ -50,14 +51,14 @@ sponsors:
     size: 30
     sponsors:
 partners:
-#  - name: HackathonsUK
-#    logo: /assets/huk-logo-colour.png
-#    colour: "eee"
-#    url: https://www.hackathons.org.uk
   - name: CSS
     logo: /assets/css-logo-colour-crop.png
     colour: "2f3c63"
     url: https://cssbham.com
+  - name: HackathonsUK
+    logo: /assets/huk-logo-colour.png
+    colour: "eee"
+    url: https://www.hackathons.org.uk
   - name: AFNOM
     logo: /assets/afnom-logo.png
     colour: "000000"
@@ -161,18 +162,25 @@ faqs:
   have fun!</p> 
 </div>
 
-{% if page.tickets %}
 <div id="tickets" class="tickets section">
   <div class="tickets-description">
+    {% if page.tickets.released %}
     <p class="tickets-title"><i class="fa-solid fa-ticket"></i> Tickets now available!</p>
     <p>
-      You can now register for birmingHack 2025! Please note that tickets are limited, so make sure to register as soon as possible.
+      You can now register for birmingHack 2026! Please note that tickets are limited, so make sure to register as soon as possible.
     </p>
   </div>
-  <a href="/tickets">Register <i class="fa-solid fa-arrow-right-long"></i></a>
+  <a href="{{ page.tickets.link }}">Register <i class="fa-solid fa-arrow-right-long"></i></a>
+    {% else %}
+    <p class="tickets-title"><i class="fa-solid fa-ticket"></i> Tickets not yet released</p>
+    <p>
+      Registration for birmingHack 2026 will open soon. Check back here or follow us for updates on when tickets become available.
+    </p>
+  </div>
+    {% endif %}
 </div>
-{% endif %}
 
+{% if page.show_sponsors %}
 <div id="sponsors" class="sponsors section">
   <h2 class="section-title">Sponsors</h2>
   <!-- <p>
@@ -190,6 +198,7 @@ faqs:
     </div>
   {% endfor %}
 </div>
+{% endif %}
 
 <div id="schedule" class="schedule">
   <div class="section">
