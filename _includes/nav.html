@@ -1,11 +1,21 @@
 <div class="navbar">
   <nav>
+    <div class="dropdown">
+      <a href="#">Archive</a>
+      <div class="dropdown-content">
+        <a href="/archive/2025">2025</a>
+        <a href="/archive/2026">2026</a>
+      </div>
+    </div>
+
     <a href="/#schedule">Schedule</a>
     <a href="/#sponsors">Sponsors</a>
     <a href="/#partners">Partners</a>
     <a href="/#faqs">FAQs</a>
+
     <a class="tickets" href="/#tickets">Tickets</a>
   </nav>
+
   {% if include.logo %}
   <a href="/">
     <img src="/assets/birminghack-pathed.svg" height="65" />

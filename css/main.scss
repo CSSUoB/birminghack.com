@@ -185,7 +185,53 @@ nav {
     gap: 1rem;
     flex-wrap: wrap;
     justify-content: flex-end;
+}
 
+nav .dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+nav .dropdown > a {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+nav .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    width: 100%;
+
+    background-color: var(--color-background-alt);
+    border: 1px solid var(--color-line);
+    padding: 0.3rem 0;
+    z-index: 10;
+}
+
+nav .dropdown-content a {
+    display: block;
+    padding: 0.4rem 0.8rem;
+    text-align: center;
+    color: var(--color-text);
+    font-family: var(--font-monospace);
+    font-size: var(--text-small);
+}
+
+nav .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+nav .dropdown-content a:hover {
+    background-color: var(--color-background);
+    color: var(--color-primary);
+}
+
+nav .dropdown:hover .dropdown-content {
+    display: block;
 }
 
 a:link, a:visited {
