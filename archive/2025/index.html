@@ -2,11 +2,11 @@
 layout: page
 ---
 
-{% assign page = site.data['2026'] %}
+{% assign page = site.data['2025'] %}
 
 <div class="hero-container">
   <div class="hero">
-    <img class="logo" src="/assets/birminghack-pathed.svg" />
+    <img class="logo" src="/assets/birminghack1-logo-vec.svg" />
     <div class="date">
       {{ page.event.date }}
     </div>
@@ -16,6 +16,20 @@ layout: page
   </div>
 </div>
 
+<div class="about">
+    <h3>About this event</h3>
+    <div class="attendees">
+        birmingHack {{page.event.edition}} had {{ page.event.attendees }} hackers with {{ page.event.ticket-sales }} ticket sales!
+        The devpost is available <a href={{ page.event.devpost-link }}>here</a>!
+    </div>
+
+    <div class="photos-button">
+        <a href="{{ page.event.photos }}" class="photos-link">
+            <h3>Photos</h3>
+        </a>
+    </div>
+</div>
+
 <div class="welcome section">
   <h3>Welcome to birmingHack!</h3>
   <p><b>birmingHack</b> is a 24-hour hackathon hosted by the Computer Science Society at the University of Birmingham. Whether you're 
@@ -23,31 +37,6 @@ layout: page
   have fun!</p> 
 </div>
 
-<div id="tickets" class="tickets section">
-  <div class="tickets-description">
-    {% if page.tickets.released %}
-      {% if page.ticket.available %}
-        <p class="tickets-title"><i class="fa-solid fa-ticket"></i> Tickets now available!</p>
-        <p>
-          You can now register for birmingHack 2026! Please note that tickets are limited, so make sure to register as soon as possible.
-        </p>
-      </div>
-      <a href="{{ page.tickets.link }}">Register <i class="fa-solid fa-arrow-right-long"></i></a>
-      {% else %}
-        <p class="tickets-title"><i class="fa-solid fa-ticket"></i> Tickets no longer available</p>
-        <p>
-          Registration for birmingHack 2026 is no longer available. Hope to see you next year!
-        </p>
-        </div>
-      {% endif %}
-    {% else %}
-    <p class="tickets-title"><i class="fa-solid fa-ticket"></i> Tickets not yet released</p>
-    <p>
-      Registration for birmingHack 2026 will open soon. Check back here or follow us for updates on when tickets become available.
-    </p>
-  </div>
-    {% endif %}
-</div>
 
 {% if page.show_sponsors %}
 <div id="sponsors" class="sponsors section">
@@ -92,7 +81,7 @@ layout: page
       </div>
       {% endfor %}
     </div>
-    {% unless page.schedule-final %}
+    {% unless page.schedule.final %}
     <p class="disclaimer">* This schedule is not final; it is subject to change.</p>
     {% endunless %}
   </div>
@@ -133,7 +122,7 @@ layout: page
       </div>
     </div>
     <div id="timer-text">
-      <span class="timer-label">until birmingHack starts!</span>
+      <span class="timer-label">until birmingHack {{ page.event.edition }} starts!</span>
     </div>
   </div>
 </div>
@@ -162,5 +151,5 @@ layout: page
 </div>
 
 <script>
-{% include countdown.js date="Mar 14, 2026 12:00:00" edition="2.0" %}
+{% include countdown.js date='Mar 23, 2025 12:00:00' edition='1.0' %}
 </script>

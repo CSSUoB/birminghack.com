@@ -1,0 +1,172 @@
+event:
+  date: "22nd - 23rd March 2025"
+  location: "School of Computer Science, University of Birmingham"
+  edition: 1.0
+  attendees: 77
+  ticket-sales: 100
+  devpost-link: https://birminghack.devpost.com
+  photos: https://photos.app.goo.gl/E3HaGZnapawYx9V88
+schedule:
+  events:
+    - day: Saturday
+      events:
+      - time: "09:00"
+        title: Registration
+      - time: "11:00"
+        title: Opening ceremony
+      - time: "12:00"
+        title: Hacking begins
+      - time: "12:05"
+        title: Team building
+      - time: "13:00"
+        title: Lunch
+      - time: "14:00"
+        title: AFNOM mini-CTF launch 
+      - time: "14:30"
+        title: Neuphonic workshop
+      - time: "16:00"
+        title: Sai's git workshop
+      - time: "17:30"
+        title: Chess tournament (qualifiers)
+      - time: "18:30"
+        title: Dinner
+      - time: "21:00"
+        title: Chess tournament (finals)
+      - time: "22:00"
+        title: Cup stacking
+    - day: Sunday
+      events:
+      - time: "00:00"
+        title: Midnight movie screening
+      - time: "08:00"
+        title: Breakfast
+      - time: "11:00"
+        title: Devpost registration deadline
+      - time: "12:00"
+        title: Hacking ends
+      - time: "12:15"
+        title: Lunch
+      - time: "13:00"
+        title: Judging begins
+      - time: "15:00"
+        title: Closing ceremony
+      - time: "17:00"
+        title: Doors close
+  final: true
+  notes: "birmingHack takes place over both days of the weekend. The event will end no later than 5pm on Sunday."
+show_sponsors: true
+sponsors:
+  - tier: gold
+    size: 140
+    sponsors:
+      - name: Neuphonic
+        logo: /assets/neuphonic-logo.png
+        colour: "ffffff"
+        url: https://neuphonic.com/
+  - tier: silver
+    size: 70
+    sponsors:
+      - name: Valyfy
+        logo: /assets/valyfy-logo.jpg
+        colour: "ffffff"
+        url: https://valyfy.com
+  - tier: bronze
+    size: 30
+    sponsors:
+      - name: Majestic
+        logo: /assets/majestic-logo.png
+        colour: "2A556D"
+        height: 60
+        url: https://majestic.com
+      - name: The Trade Desk
+        logo: /assets/the-trade-desk-logo.jpg
+        colour: "ffffff"
+        url: https://www.thetradedesk.com/uk
+      - name: Kainos
+        logo: /assets/kainos-logo.png
+        colour: "ffffff"
+        url: https://kainos.com
+partners:
+  - name: CSS
+    logo: /assets/css-logo-colour-crop.png
+    colour: "2f3c63"
+    url: https://cssbham.com
+  - name: AFNOM
+    logo: /assets/afnom-logo.png
+    colour: "000000"
+    url: https://afnom.net
+  - name: AlgoSoc
+    logo: /assets/algosoc-logo-colour.png
+    colour: "0B0000"
+    url: "https://www.guildofstudents.com/organisation/algosoc/"
+  - name: Games Development Society
+    logo: /assets/gds-logo-colour.png
+    colour: "fff"
+    url: "https://www.guildofstudents.com/organisation/gamesdevelopment/"
+  - name: Guild of Students
+    logo: /assets/gos-logo-colour.png
+    colour: "eee"
+    url: https://guildofstudents.com
+  - name: The Univeristy of Birmingham School of Computer Science
+    logo: /assets/uob-logo-colour.png
+    colour: "eee"
+    url: https://www.cs.bham.ac.uk
+faqs:
+  - question: What's a hackathon?
+    answer: |
+      A hackathon is a programming competition where you work in a team to create a project in a short amount of time. 
+      It's a great way to learn new skills, meet new people, and have fun!
+
+  - question: How much does it cost?
+    answer: 
+      Absolutely nothing! birmingHack is free to attend, you just need to register a ticket when they become available.
+      Food will also be provided for all attendees.
+
+  - question: Who can attend?
+    answer: |
+      birmingHack is open to all students aged 18+ at the University of Birmingham, regardless of your course or experience level. 
+      Please note that for this inaugural event, we are only able to accept students from the University of Birmingham; for future 
+      events, we hope to open up to students from other UK universities.
+      
+  - question: When will tickets be available?
+    answer: |
+      Tickets are now available! See above for the link to the registration.
+
+  - question: Why should I attend?
+    answer: |
+      Because it's fun! If you've ever thought about attending a hackathon before, then birmingHack is a great entry point.
+      Plus, it's free ;)
+  
+  - question: Do I need loads of experience to participate?
+    answer: |
+      Not at all! birmingHack is a great place to learn, and we will have workshops and people available to help you out.
+  
+  - question: What should I bring?
+    answer: |
+      You should bring your laptop, a charger, any other hardware you need, and your student ID. 
+      Please note there will not be any hardware available to borrow at the event, nor can we permit soldering equipment inside the building.
+      
+  - question: How do I get there?
+    answer: |
+      birmingHack is held at the School of Computer Science at the University of Birmingham. 
+      This is located next to University station, and is referred to as Y9 on university maps.
+  
+  - question: How large can my team be?
+    answer: |
+      Teams can be up to 4 people to be eligible for prizes. 
+
+  - question: What if I don't have a team?
+    answer: |
+      No problem! We will have a team building session at the start of the event to help you find one.
+  
+  - question: When can I start working on my project?
+    answer: |
+      You can start working on your project as soon as hacking begins at 12:00 on Saturday.
+      You're welcome to come up with ideas before then, but we ask you do not start working on your project before this time.
+
+  - question: How does judging work?
+    answer: |
+      You may submit your project to as many categories as you want on Devpost. 
+      After hacking ends, you will demo your project to specific judges from the categories you entered, and a winner
+      for each category will be selected.
+  

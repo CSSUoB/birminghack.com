@@ -1,17 +1,21 @@
 <div class="navbar">
   <nav>
-    <div class="dropdown">
-      <a href="#">Archive</a>
-      <div class="dropdown-content">
-        <a href="/archive/2025">2025</a>
-        <a href="/archive/2026">2026</a>
+    {% for item in site.menu %}
+      {% if item.children %}
+      <div class="dropdown">
+        <a href="{{ item.link | relative_url }}">{{ item.name }}</a>
+        <div class="dropdown-content">
+          {% for sub in item.children %}
+          <a href="{{ sub.link }}">{{ sub.name }}</a>
+          {% endfor %}
+        </div>
       </div>
-    </div>
-
-    <a href="/#schedule">Schedule</a>
-    <a href="/#sponsors">Sponsors</a>
-    <a href="/#partners">Partners</a>
-    <a href="/#faqs">FAQs</a>
+      {% else %}
+        {% if item.name != "Tickets" %}
+          <a href="{{ item.link | relative_url }}">{{ item.name }}</a>
+        {% endif %}
+      {% endif %}
+    {% endfor %}
 
     <a class="tickets" href="/#tickets">Tickets</a>
   </nav>
