@@ -11,7 +11,7 @@ schedule:
     - day: Saturday
       events:
       - time: "09:00"
-        title: Registration test
+        title: Registration
       - time: "11:00"
         title: Opening ceremony
       - time: "12:00"
