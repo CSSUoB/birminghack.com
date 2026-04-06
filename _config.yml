@@ -4,7 +4,7 @@ url: birminghack.com
 
 menu:
   - name: Archive
-    link: /Archive
+    link: /archive/2026
     children:
       - name: 2026
         link: /archive/2026/
