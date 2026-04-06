@@ -3,8 +3,8 @@ event:
   location: "School of Computer Science, University of Birmingham"
   edition: 2.0
   attendees: 106
-  ticket-sales: 160
-  devpost-link: https://birminghack2.devpost.com
+  ticket_sales: 160
+  devpost_link: https://birminghack2.devpost.com
   photos: https://photos.app.goo.gl/BMMvjKDU8wvsRGsd9
 schedule:
   events:
