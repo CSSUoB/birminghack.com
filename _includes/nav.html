@@ -6,7 +6,7 @@
         <a href="{{ item.link | relative_url }}">{{ item.name }}</a>
         <div class="dropdown-content">
           {% for sub in item.children %}
-          <a href="{{ sub.link }}">{{ sub.name }}</a>
+          <a href="{{ sub.link | relative_url }}">{{ sub.name }}</a>
           {% endfor %}
         </div>
       </div>
