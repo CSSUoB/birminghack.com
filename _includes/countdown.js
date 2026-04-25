@@ -1,5 +1,5 @@
 const startDate = new Date("{{ include.date }}").getTime();
-const endDate = new Date(startDate + 60 * 60 * 24 * 1000);
+const endDate = startDate + 60 * 60 * 24 * 1000;
 const edition = "{{ include.edition }}";
 
 document.addEventListener("DOMContentLoaded", () => {
