@@ -1,11 +1,25 @@
 <div class="navbar">
   <nav>
-    <a href="/#schedule">Schedule</a>
-    <a href="/#sponsors">Sponsors</a>
-    <a href="/#partners">Partners</a>
-    <a href="/#faqs">FAQs</a>
+    {% for item in site.menu %}
+      {% if item.children %}
+      <div class="dropdown">
+        <a href="{{ item.link | relative_url }}">{{ item.name }}</a>
+        <div class="dropdown-content">
+          {% for sub in item.children %}
+          <a href="{{ sub.link | relative_url }}">{{ sub.name }}</a>
+          {% endfor %}
+        </div>
+      </div>
+      {% else %}
+        {% if item.name != "Tickets" %}
+          <a href="{{ item.link | relative_url }}">{{ item.name }}</a>
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+
     <a class="tickets" href="/#tickets">Tickets</a>
   </nav>
+
   {% if include.logo %}
   <a href="/">
     <img src="/assets/birminghack-pathed.svg" height="65" />

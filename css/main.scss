@@ -69,6 +69,39 @@ div.hero {
     }
 }
 
+div.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 0rem 4rem 0;
+    gap: 1rem;
+    color: var(--color-heading);
+    font-family: var(--font-monospace);
+
+    .attendees {
+        font-size: var(--text-normal);
+    }
+
+    .photos-button {
+        justify-content: center;
+        display: grid;
+    }
+
+    .photos-link {
+        display: inline-block;
+        width: 150px;
+        //height: 25px;
+        text-decoration: none;
+        text-align: center;
+        align-items: center;
+        font-size: 20px;
+        background-color: var(--color-primary);
+        color: var(--color-text);
+        border-radius: 20px;
+        padding: 15px;
+    }
+}
+
 b, strong {
     font-weight: 700;
 }
@@ -185,8 +218,53 @@ nav {
     gap: 1rem;
     flex-wrap: wrap;
     justify-content: flex-end;
-
 }
+
+nav .dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+nav .dropdown > a {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+nav .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    width: 100%;
+
+    background-color: var(--color-background-alt);
+    border: 1px solid var(--color-line);
+    padding: 0.3rem 0;
+    z-index: 10;
+}
+
+nav .dropdown-content a {
+    display: block;
+    padding: 0.4rem 0.8rem;
+    text-align: center;
+    color: var(--color-text);
+    font-family: var(--font-monospace);
+    font-size: var(--text-small);
+}
+
+nav .dropdown:hover .dropdown-content,
+nav .dropdown:focus-within .dropdown-content {
+    display: block;
+}
+
+nav .dropdown-content a:hover {
+    background-color: var(--color-background);
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
 
 a:link, a:visited {
     color: var(--color-primary);
@@ -446,6 +524,7 @@ div.footer-content {
             text-align: center;
         }
     }
+
     
     div.navbar {
         padding: 1rem 1rem 0 1rem;
