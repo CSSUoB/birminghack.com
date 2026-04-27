@@ -2,16 +2,16 @@
 layout: page
 ---
 
-{% assign page = site.data['2026'] %}
+{% assign website = site.data['2026'] %}
 
 <div class="hero-container">
   <div class="hero">
     <img class="logo" src="/assets/birminghack-pathed.svg" />
     <div class="date">
-      {{ page.event.date }}
+      {{ website.event.date }}
     </div>
     <div class="location">
-      {{ page.event.location }}
+      {{ website.event.location }}
     </div>
   </div>
 </div>
@@ -25,14 +25,14 @@ layout: page
 
 <div id="tickets" class="tickets section">
   <div class="tickets-description">
-    {% if page.tickets.released %}
-      {% if page.tickets.available %}
+    {% if website.tickets.released %}
+      {% if website.tickets.available %}
         <p class="tickets-title"><i class="fa-solid fa-ticket"></i> Tickets now available!</p>
         <p>
           You can now register for birmingHack 2026! Please note that tickets are limited, so make sure to register as soon as possible.
         </p>
       </div>
-      <a href="{{ page.tickets.link }}">Register <i class="fa-solid fa-arrow-right-long"></i></a>
+      <a href="{{ website.tickets.link }}">Register <i class="fa-solid fa-arrow-right-long"></i></a>
       {% else %}
         <p class="tickets-title"><i class="fa-solid fa-ticket"></i> Tickets no longer available</p>
         <p>
@@ -49,13 +49,13 @@ layout: page
     {% endif %}
 </div>
 
-{% if page.show_sponsors %}
+{% if website.show_sponsors %}
 <div id="sponsors" class="sponsors section">
   <h2 class="section-title">Sponsors</h2>
   <!-- <p>
-    birmingHack {{ page.event.edition }} is proudly sponsored by the following
+    birmingHack {{ website.event.edition }} is proudly sponsored by the following
   </p> -->
-  {% for sponsor-tier in page.sponsors %}
+  {% for sponsor-tier in website.sponsors %}
     <div class="sponsors-container">
       {% for sponsor in sponsor-tier.sponsors %}
       <div class="sponsor" style="{{ 'background-color: #' | append: sponsor.colour }}">
@@ -73,10 +73,10 @@ layout: page
   <div class="section">
     <h2 class="section-title">Schedule</h2>
     <p>
-      {{ page.schedule.notes }} 
+      {{ website.schedule.notes }} 
     </p>
     <div class="days">
-      {% for day in page.schedule.events %}
+      {% for day in website.schedule.events %}
       <div class="day">
         <h3 class="header">{{ day.day }}</h3>
         {% for item in day.events %}
@@ -92,7 +92,7 @@ layout: page
       </div>
       {% endfor %}
     </div>
-    {% unless page.schedule.final %}
+    {% unless website.schedule.final %}
     <p class="disclaimer">* This schedule is not final; it is subject to change.</p>
     {% endunless %}
   </div>
@@ -141,7 +141,7 @@ layout: page
 <div id="partners" class="partners section">
   <h2 class="section-title">Partners</h2>
   <div class="partners-container">
-    {% for partner in page.partners %}
+    {% for partner in website.partners %}
       <div class="partner" style="{{ 'background-color: #' | append: partner.colour }}">
         <a href="{{ partner.url }}" target="_blank" title="{{ partner.name }}">
           <img src="{{ partner.logo }}" alt="{{ partner.name }}" height="75" />        
@@ -153,7 +153,7 @@ layout: page
 
 <div id="faqs" class="faqs section">
   <h2 class="section-title">FAQs</h2>
-  {% for faq in page.faqs %}
+  {% for faq in website.faqs %}
   <details>
     <summary>{{ faq.question }}</summary>
     <p>{{ faq.answer }}</p>
