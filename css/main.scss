@@ -254,7 +254,8 @@ nav .dropdown-content a {
     font-size: var(--text-small);
 }
 
-nav .dropdown:hover .dropdown-content {
+nav .dropdown:hover .dropdown-content,
+nav .dropdown:focus-within .dropdown-content {
     display: block;
 }
 
